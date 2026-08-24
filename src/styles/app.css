@@ -113,10 +113,8 @@
 
 .tarot-card {
   display: flex;
-  flex-direction: column;
-  gap: 14px;
-  width: 236px;
-  padding: 18px 18px 20px;
+  width: 248px;
+  padding: 9px;
   border-radius: 14px;
   border: 1px solid rgba(237, 235, 245, 0.18);
   background: linear-gradient(158deg, #150F30 0%, #241A52 55%, #3A2A6B 100%);
@@ -124,13 +122,36 @@
 }
 
 .tarot-card--overlay {
-  width: min(236px, 62vw);
+  width: min(248px, 66vw);
+}
+
+.tarot-card__inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(245, 201, 78, 0.34);
+  box-shadow: inset 0 0 0 3px rgba(245, 201, 78, 0.07);
+}
+
+.tarot-card__header {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.tarot-card__rule {
+  flex: 1;
+  height: 1px;
+  background: rgba(245, 201, 78, 0.28);
 }
 
 .tarot-card__roman {
   font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 0.2em;
+  font-size: 10px;
+  letter-spacing: 0.18em;
   color: var(--mp-crescent-gold);
 }
 
@@ -141,26 +162,35 @@
 
 .tarot-card__foot {
   margin-top: auto;
-  border-top: 1px solid rgba(237, 235, 245, 0.18);
-  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  text-align: center;
+}
+
+.tarot-card__foot-rule {
+  width: 26px;
+  height: 1px;
+  background: rgba(245, 201, 78, 0.35);
 }
 
 .tarot-card__title {
   margin: 0;
   font-family: 'Lora', serif;
   font-weight: 600;
-  font-size: 21px;
-  line-height: 1.25;
+  font-size: 20px;
+  line-height: 1.2;
   color: var(--mp-moonlight-pearl);
 }
 
 .tarot-card__keywords {
-  margin: 8px 0 0;
+  margin: 0;
   font-weight: 600;
-  font-size: 10px;
-  line-height: 1.6;
-  letter-spacing: 0.12em;
+  font-size: 9px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 /* ---------- Overlay: Tageskarte ---------- */
