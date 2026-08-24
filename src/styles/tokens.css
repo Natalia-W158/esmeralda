@@ -1,0 +1,101 @@
+/* Moon Power — Design-Tokens, übernommen aus dem Kartendeck-Handoff. */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/lora-normal-400_700-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/lora-italic-400_700-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/poppins-normal-400-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/poppins-normal-500-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/poppins-normal-600-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/poppins-normal-700-latin.woff2') format('woff2');
+}
+
+:root {
+  /* Master brand */
+  --mp-cosmos-indigo: #1E1640;
+  --mp-cosmos-900: #150F30;
+  --mp-cosmos-700: #241A52;
+  --mp-cosmos-500: #3A2A6B;
+  --mp-crescent-gold: #F5C94E;
+  --mp-crescent-gold-deep: #C99A18;
+  --mp-crescent-gold-soft: #FDF3D6;
+
+  /* Moonlight neutrals */
+  --mp-pure-white: #FFFFFF;
+  --mp-cloud-white: #FBFAFD;
+  --mp-moonlight-pearl: #EDEBF5;
+  --mp-lavender-100: #E6E2F2;
+  --mp-lavender-200: #D5CFE8;
+
+  /* Twilight (text on dark) */
+  --mp-twilight-300: #C9C2E0;
+  --mp-twilight-500: #9C93C4;
+  --mp-twilight-700: #6B6193;
+
+  /* Ink (text on light) */
+  --mp-ink-900: #171422;
+  --mp-ink-800: #2A2437;
+  --mp-ink-600: #4E4760;
+  --mp-ink-400: #7A7389;
+  --mp-ink-200: #B4AEC2;
+
+  /* Farb-IDs (Kartenakzente) */
+  --mp-blossom-pink: #F6A9C6;
+  --mp-mercury-blue: #4FA6E0;
+  --mp-flame-red: #E63946;
+  --mp-forest-green: #3E8E5B;
+  --mp-sunset-orange: #F5943A;
+  --mp-steel-teal: #2E6E7E;
+  --mp-deep-ocean-blue: #2A4B7C;
+  --mp-garnet-wine: #6E1E3A;
+  --mp-royal-violet: #5B3A8E;
+
+  /* Kartenmotiv-Akzente (aus dem Deck übernommen) */
+  --mp-card-green: #6FBF8A;
+  --mp-card-rose: #F2707A;
+  --mp-card-silver: #D8CFE8;
+  --mp-card-platinum: #C8CDD1;
+  --mp-card-periwinkle: #8E9FD8;
+  --mp-card-bronze: #C9954F;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--mp-cosmos-indigo);
+  color: var(--mp-moonlight-pearl);
+}

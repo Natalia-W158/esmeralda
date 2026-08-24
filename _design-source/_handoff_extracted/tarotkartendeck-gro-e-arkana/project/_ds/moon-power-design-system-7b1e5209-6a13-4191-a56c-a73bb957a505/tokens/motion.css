@@ -1,0 +1,14 @@
+/* Moon Power — motion. Calm and short: things fade and rise, nothing bounces. */
+:root {
+  --dur-fast: 120ms; /* @kind other */
+  --dur-base: 200ms; /* @kind other */
+  --dur-slow: 360ms; /* @kind other */
+
+  --ease-moon: cubic-bezier(0.2, 0.8, 0.2, 1); /* @kind other */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* @kind other */
+
+  --transition-control: background-color var(--dur-fast) var(--ease-moon), border-color var(--dur-fast) var(--ease-moon), color var(--dur-fast) var(--ease-moon), box-shadow var(--dur-fast) var(--ease-moon), transform var(--dur-fast) var(--ease-moon); /* @kind other */
+  --lift-hover: translateY(-1px); /* @kind other */
+  --press-scale: scale(0.985); /* @kind other */
+}

@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/moon-power-design-system-7b1e5209-6a13-4191-a56c-a73bb957a505/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/moon-power-design-system-7b1e5209-6a13-4191-a56c-a73bb957a505/tokens/colors.css">
+<link rel="stylesheet" href="_ds/moon-power-design-system-7b1e5209-6a13-4191-a56c-a73bb957a505/tokens/typography.css">
+<link rel="stylesheet" href="_ds/moon-power-design-system-7b1e5209-6a13-4191-a56c-a73bb957a505/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/moon-power-design-system-7b1e5209-6a13-4191-a56c-a73bb957a505/tokens/shape.css">
+<link rel="stylesheet" href="_ds/moon-power-design-system-7b1e5209-6a13-4191-a56c-a73bb957a505/tokens/elevation.css">
+<link rel="stylesheet" href="_ds/moon-power-design-system-7b1e5209-6a13-4191-a56c-a73bb957a505/tokens/motion.css">
+<link rel="stylesheet" href="_ds/moon-power-design-system-7b1e5209-6a13-4191-a56c-a73bb957a505/tokens/semantic.css">
+<link rel="stylesheet" href="_ds/moon-power-design-system-7b1e5209-6a13-4191-a56c-a73bb957a505/tokens/themes.css">
+<link rel="stylesheet" href="_ds/moon-power-design-system-7b1e5209-6a13-4191-a56c-a73bb957a505/tokens/base.css">
+<link rel="stylesheet" href="_ds/moon-power-design-system-7b1e5209-6a13-4191-a56c-a73bb957a505/styles.css">
+<script src="_ds/moon-power-design-system-7b1e5209-6a13-4191-a56c-a73bb957a505/_ds_bundle.js"></script>
+<style>
+  body { margin: 0; background: #FBFAFD; }
+  a { color: #C99A18; }
+  a:hover { color: #1E1640; }
+</style>
+</helmet>
+
+<div style="background:#FBFAFD;color:#171422;font-family:Poppins,sans-serif">
+
+  <header style="background:linear-gradient(158deg,#150F30 0%,#241A52 58%,#3A2A6B 100%);color:#EDEBF5">
+    <div style="max-width:1180px;margin:0 auto;padding:96px 40px 88px;display:flex;flex-direction:column;gap:24px">
+      <div style="display:flex;align-items:center;gap:12px">
+        <span style="font-family:Lora,serif;font-size:26px;color:#F5C94E;line-height:1">☾</span>
+        <span style="font-family:Poppins,sans-serif;font-weight:600;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#C9C2E0">Moon Power · Kartendeck</span>
+      </div>
+      <h1 style="margin:0;font-family:Lora,serif;font-weight:700;font-size:46px;line-height:1.12;letter-spacing:-0.01em;color:#EDEBF5;max-width:16ch">Die Große Arkana</h1>
+      <p style="margin:0;max-width:620px;font-size:17px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Zweiundzwanzig Karten, zweiundzwanzig Grundmuster. Jedes Motiv zeigt, worum es geht — die Schlagworte am unteren Rand halten die Deutung fest, damit du sie nicht auswendig lernen musst.</p>
+      <div style="display:flex;gap:28px;flex-wrap:wrap;padding-top:8px">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-weight:600;font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:#9C93C4">Karten</span>
+          <span style="font-family:Lora,serif;font-size:28px;line-height:1;color:#F5C94E">22</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-weight:600;font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:#9C93C4">Farb-IDs</span>
+          <span style="font-family:Lora,serif;font-size:28px;line-height:1;color:#F5C94E">9</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-weight:600;font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:#9C93C4">Nummern</span>
+          <span style="font-family:Lora,serif;font-size:28px;line-height:1;color:#F5C94E">0 — XXI</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section style="max-width:1180px;margin:0 auto;padding:80px 40px 0">
+    <span style="display:block;font-weight:600;font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:#7A7389">Das Deck</span>
+    <h2 style="margin:12px 0 0;font-family:Lora,serif;font-weight:600;font-size:28px;line-height:1.3;color:#171422">Alle 22 Karten</h2>
+  </section>
+
+  <section style="max-width:1180px;margin:0 auto;padding:32px 40px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(236px,1fr));gap:22px">
+
+    <article data-mp-theme="mercury" data-screen-label="00 Der Narr" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">0</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <circle cx="30" cy="34" r="17" fill="none" stroke="#F5C94E" stroke-width="4" opacity="0.7"></circle>
+        <path d="M0 194h108l10 26H0z" fill="#C9C2E0" opacity="0.18"></path>
+        <path d="M46 108L104 56" stroke="#4FA6E0" stroke-width="5" stroke-linecap="round"></path>
+        <path d="M104 56c10-9 25-3 23 9-2 10-15 14-23 8-5-4-5-13 0-17z" fill="#4FA6E0"></path>
+        <circle cx="62" cy="80" r="13" fill="#4FA6E0"></circle>
+        <path d="M50 96h24l16 98H34z" fill="#4FA6E0"></path>
+        <path d="M74 100l14 12-6 7-16-12z" fill="#4FA6E0"></path>
+        <g fill="#4FA6E0" opacity="0.8">
+          <ellipse cx="128" cy="178" rx="17" ry="9"></ellipse>
+          <circle cx="145" cy="168" r="7"></circle>
+          <rect x="116" y="184" width="5" height="12" rx="2.5"></rect>
+          <rect x="135" y="184" width="5" height="12" rx="2.5"></rect>
+          <path d="M112 172l-10-8 4-5 10 8z"></path>
+        </g>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Der Narr</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#4FA6E0">Leichtigkeit · Aufbruch · Sorglosigkeit</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="moon" data-screen-label="01 Der Magier" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">I</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <g fill="none" stroke="#F5C94E" stroke-width="4" opacity="0.75"><circle cx="78" cy="46" r="12"></circle><circle cx="102" cy="46" r="12"></circle></g>
+        <rect x="126" y="30" width="6" height="56" rx="3" fill="#F5C94E"></rect>
+        <circle cx="86" cy="84" r="13" fill="#F5C94E"></circle>
+        <path d="M74 100h26l12 62H62z" fill="#F5C94E"></path>
+        <path d="M98 102l26-24 6 7-26 24z" fill="#F5C94E"></path>
+        <path d="M74 106l-16 30 7 4 16-30z" fill="#F5C94E"></path>
+        <rect x="26" y="164" width="128" height="9" rx="4.5" fill="#C9C2E0" opacity="0.32"></rect>
+        <path d="M52 144h20l-4 20H56z" fill="#C9C2E0" opacity="0.55"></path>
+        <circle cx="120" cy="154" r="10" fill="#C9C2E0" opacity="0.55"></circle>
+        <rect x="34" y="173" width="8" height="30" rx="3" fill="#C9C2E0" opacity="0.32"></rect>
+        <rect x="138" y="173" width="8" height="30" rx="3" fill="#C9C2E0" opacity="0.32"></rect>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Der Magier</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#F5C94E">Gestaltungskraft · Wissen · Umsetzung</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="moon" data-screen-label="02 Die Hohepriesterin" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">II</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <rect x="16" y="34" width="18" height="170" rx="5" fill="#F6A9C6" opacity="0.45"></rect>
+        <rect x="146" y="34" width="18" height="170" rx="5" fill="#F6A9C6" opacity="0.45"></rect>
+        <path d="M34 48h112v78H34z" fill="#F6A9C6" opacity="0.16"></path>
+        <path d="M34 122c18 10 36 4 56 4s38 6 56-4v8H34z" fill="#F6A9C6" opacity="0.28"></path>
+        <path d="M76 58h28l-4 12H80z" fill="#F6A9C6"></path>
+        <circle cx="90" cy="86" r="14" fill="#F6A9C6"></circle>
+        <path d="M72 104h36l22 96H50z" fill="#F6A9C6"></path>
+        <path d="M90 172a20 20 0 1 0 0 34 25 25 0 0 1 0-34z" fill="#150F30"></path>
+        <path d="M96 176a17 17 0 1 0 0 28 21 21 0 0 1 0-28z" fill="#F5C94E" opacity="0.85"></path>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Die Hohepriesterin</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#F6A9C6">Intuition · Wissen · Durchschauen</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="jupiter" data-screen-label="03 Die Herrscherin" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">III</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <path d="M0 196h180v10H0z" fill="#6FBF8A" opacity="0.22"></path>
+        <path d="M72 52h34l-4 14H76z" fill="#F5C94E"></path>
+        <circle cx="89" cy="82" r="14" fill="#6FBF8A"></circle>
+        <path d="M68 100h42c14 8 20 26 22 46l8 50H38l8-50c2-20 8-38 22-46z" fill="#6FBF8A"></path>
+        <path d="M89 132c8-10 22-6 22 6s-14 20-22 26c-8-6-22-14-22-26s14-16 22-6z" fill="#150F30" opacity="0.55"></path>
+        <g fill="#F5C94E" opacity="0.85">
+          <rect x="150" y="128" width="5" height="68" rx="2.5"></rect>
+          <ellipse cx="146" cy="136" rx="5" ry="8" transform="rotate(-25 146 136)"></ellipse>
+          <ellipse cx="159" cy="136" rx="5" ry="8" transform="rotate(25 159 136)"></ellipse>
+          <ellipse cx="146" cy="152" rx="5" ry="8" transform="rotate(-25 146 152)"></ellipse>
+          <ellipse cx="159" cy="152" rx="5" ry="8" transform="rotate(25 159 152)"></ellipse>
+          <ellipse cx="152.5" cy="122" rx="5" ry="9"></ellipse>
+        </g>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Die Herrscherin</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#6FBF8A">Fülle · Reife · Fruchtbarkeit</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="mars" data-screen-label="04 Der Herrscher" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">IV</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <path d="M44 96h92v108H44z" fill="#F2707A" opacity="0.22"></path>
+        <rect x="36" y="88" width="108" height="14" rx="4" fill="#F2707A" opacity="0.35"></rect>
+        <path d="M70 44h40l-3 8h6l-4 14H71l-4-14h6z" fill="#F5C94E"></path>
+        <circle cx="90" cy="82" r="14" fill="#F2707A"></circle>
+        <path d="M74 100h32l14 50H60z" fill="#F2707A"></path>
+        <path d="M62 150h56v18H62z" fill="#F2707A"></path>
+        <rect x="68" y="168" width="14" height="36" rx="3" fill="#F2707A"></rect>
+        <rect x="98" y="168" width="14" height="36" rx="3" fill="#F2707A"></rect>
+        <rect x="126" y="66" width="6" height="84" rx="3" fill="#F5C94E"></rect>
+        <circle cx="129" cy="60" r="9" fill="#F5C94E"></circle>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Der Herrscher</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#F2707A">Führung · Verantwortung · Kontrolle</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="saturn" data-screen-label="05 Der Hierophant" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">V</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <rect x="30" y="30" width="10" height="150" rx="4" fill="#D8CFE8" opacity="0.3"></rect>
+        <rect x="140" y="30" width="10" height="150" rx="4" fill="#D8CFE8" opacity="0.3"></rect>
+        <path d="M78 28h24v10H78zM74 40h32v12H74zM70 54h40v14H70z" fill="#F5C94E"></path>
+        <circle cx="90" cy="84" r="13" fill="#D8CFE8"></circle>
+        <path d="M76 100h28l18 62H58z" fill="#D8CFE8"></path>
+        <path d="M104 104l16-16 6 6-16 20z" fill="#D8CFE8"></path>
+        <path d="M64 106l-14 24 7 4 14-24z" fill="#D8CFE8"></path>
+        <g fill="#D8CFE8" opacity="0.6">
+          <circle cx="56" cy="176" r="9"></circle>
+          <path d="M48 188h16l6 20H42z"></path>
+          <circle cx="124" cy="176" r="9"></circle>
+          <path d="M116 188h16l6 20h-28z"></path>
+        </g>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Der Hierophant</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#D8CFE8">Sinn · Wahrheit · Überzeugung</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="venus" data-screen-label="06 Die Liebenden" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">VI</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <circle cx="90" cy="46" r="26" fill="#F5C94E" opacity="0.24"></circle>
+        <path d="M90 52c8-12 26-8 26 6s-18 24-26 32c-8-8-26-18-26-32s18-18 26-6z" fill="#F5C94E" opacity="0.75"></path>
+        <circle cx="52" cy="108" r="14" fill="#F5943A"></circle>
+        <path d="M38 126h28l14 78H24z" fill="#F5943A"></path>
+        <circle cx="128" cy="108" r="14" fill="#F5943A"></circle>
+        <path d="M114 126h28l14 78h-56z" fill="#F5943A"></path>
+        <path d="M66 140h48v10H66z" fill="#F5943A"></path>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Die Liebenden</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#F5943A">Liebe · Verbindung · Zugehörigkeit</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="mercury" data-screen-label="07 Der Wagen" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">VII</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <circle cx="118" cy="62" r="13" fill="#4FA6E0"></circle>
+        <path d="M104 78h28l10 34h-48z" fill="#4FA6E0"></path>
+        <rect x="92" y="112" width="64" height="48" rx="6" fill="#4FA6E0" opacity="0.55"></rect>
+        <circle cx="106" cy="176" r="18" fill="none" stroke="#4FA6E0" stroke-width="6"></circle>
+        <circle cx="146" cy="176" r="12" fill="none" stroke="#4FA6E0" stroke-width="5"></circle>
+        <path d="M92 124H62l-8 12h38z" fill="#4FA6E0" opacity="0.75"></path>
+        <g fill="#4FA6E0">
+          <rect x="14" y="128" width="56" height="30" rx="13"></rect>
+          <path d="M50 134l8-32 14 4-10 32z"></path>
+          <path d="M58 104l24-8 3 13-22 7z"></path>
+          <path d="M60 100l-4-14 10 4z"></path>
+          <rect x="22" y="156" width="9" height="38" rx="4"></rect>
+          <rect x="52" y="156" width="9" height="38" rx="4"></rect>
+          <path d="M14 134L0 124v12l12 10z"></path>
+        </g>
+        <path d="M0 200h180v6H0z" fill="#C9C2E0" opacity="0.2"></path>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Der Wagen</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#4FA6E0">Bewegung · Entwicklung · Chancen</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="uranus" data-screen-label="08 Die Gerechtigkeit" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">VIII</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <circle cx="90" cy="44" r="13" fill="#C8CDD1"></circle>
+        <path d="M76 60h28l16 66H60z" fill="#C8CDD1"></path>
+        <path d="M60 126h60l10 78H50z" fill="#C8CDD1" opacity="0.75"></path>
+        <g stroke="#F5C94E" stroke-width="4" fill="none" stroke-linecap="round">
+          <path d="M28 96h56"></path>
+          <path d="M40 96v14M72 96v22"></path>
+        </g>
+        <path d="M26 110h28a14 14 0 0 1-28 0z" fill="#F5C94E"></path>
+        <path d="M58 118h28a14 14 0 0 1-28 0z" fill="#F5C94E"></path>
+        <rect x="136" y="70" width="7" height="88" rx="3" fill="#F5C94E"></rect>
+        <path d="M139.5 52l7 18h-14z" fill="#F5C94E"></path>
+        <rect x="126" y="158" width="27" height="7" rx="3" fill="#F5C94E"></rect>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Die Gerechtigkeit</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#C8CDD1">Gerechtigkeit · Ausgleich · Ehrlichkeit</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="saturn" data-screen-label="09 Der Eremit" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">IX</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <circle cx="126" cy="112" r="42" fill="#F5C94E" opacity="0.14"></circle>
+        <path d="M84 46c22 0 34 18 36 40l14 118H34l14-118c2-22 14-40 36-40z" fill="#F5C94E" opacity="0.85"></path>
+        <path d="M84 62c-12 0-20 10-21 24 6 6 14 9 21 9s15-3 21-9c-1-14-9-24-21-24z" fill="#150F30" opacity="0.55"></path>
+        <rect x="38" y="60" width="6" height="144" rx="3" fill="#F5C94E" opacity="0.6"></rect>
+        <g>
+          <rect x="112" y="94" width="30" height="34" rx="4" fill="#150F30"></rect>
+          <rect x="112" y="94" width="30" height="34" rx="4" fill="none" stroke="#F5C94E" stroke-width="4"></rect>
+          <path d="M127 100l4 9 9 1-7 6 2 9-8-5-8 5 2-9-7-6 9-1z" fill="#F5C94E"></path>
+          <rect x="122" y="82" width="10" height="12" rx="4" fill="none" stroke="#F5C94E" stroke-width="3"></rect>
+        </g>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Der Eremit</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#F5C94E">Rückzug · Einkehr · Erkenntnis</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="jupiter" data-screen-label="10 Das Rad des Schicksals" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">X</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <circle cx="90" cy="110" r="66" fill="none" stroke="#6FBF8A" stroke-width="8"></circle>
+        <circle cx="90" cy="110" r="18" fill="#6FBF8A"></circle>
+        <g stroke="#6FBF8A" stroke-width="5" stroke-linecap="round">
+          <path d="M90 48v20M90 152v20M28 110h20M132 110h20"></path>
+          <path d="M46 66l14 14M120 140l14 14M134 66l-14 14M60 140l-14 14"></path>
+        </g>
+        <g fill="#F5C94E">
+          <circle cx="90" cy="30" r="11"></circle>
+          <path d="M80 42h20l6 14H74z"></path>
+          <circle cx="158" cy="176" r="9"></circle>
+          <path d="M150 187h16l5 17h-26z"></path>
+          <circle cx="22" cy="176" r="9"></circle>
+          <path d="M14 187h16l5 17H9z"></path>
+        </g>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Das Rad des Schicksals</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#6FBF8A">Kreislauf · Karma · Wendepunkt</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="mars" data-screen-label="11 Die Kraft" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">XI</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <g fill="none" stroke="#F5C94E" stroke-width="4" opacity="0.75"><circle cx="50" cy="40" r="11"></circle><circle cx="72" cy="40" r="11"></circle></g>
+        <circle cx="58" cy="80" r="14" fill="#F2707A"></circle>
+        <path d="M44 98h28l16 106H28z" fill="#F2707A"></path>
+        <path d="M72 106l30 14-4 10-30-12z" fill="#F2707A"></path>
+        <g fill="#F5C94E">
+          <circle cx="126" cy="132" r="30" opacity="0.35"></circle>
+          <circle cx="126" cy="132" r="19"></circle>
+          <path d="M115 148h22l10 56h-14l-6-30-6 30h-14z"></path>
+          <path d="M156 150l16 34-8 6-18-30z"></path>
+          <path d="M119 126a3 3 0 1 1 0 6 3 3 0 0 1 0-6zM133 126a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" fill="#150F30"></path>
+          <path d="M120 140c4 4 8 4 12 0" stroke="#150F30" stroke-width="2.5" fill="none" stroke-linecap="round"></path>
+        </g>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Die Kraft</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#F2707A">Mut · Innere Stärke · Vertrauen</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="neptune" data-screen-label="12 Der Gehängte" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">XII</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <rect x="22" y="30" width="136" height="10" rx="4" fill="#8E9FD8" opacity="0.5"></rect>
+        <rect x="26" y="40" width="10" height="164" rx="4" fill="#8E9FD8" opacity="0.35"></rect>
+        <rect x="144" y="40" width="10" height="164" rx="4" fill="#8E9FD8" opacity="0.35"></rect>
+        <path d="M88 40v22" stroke="#8E9FD8" stroke-width="5"></path>
+        <path d="M74 62h28l14 62H60z" fill="#8E9FD8"></path>
+        <circle cx="90" cy="152" r="15" fill="#8E9FD8"></circle>
+        <circle cx="90" cy="152" r="26" fill="none" stroke="#F5C94E" stroke-width="3" opacity="0.8"></circle>
+        <path d="M102 60l26 26-8 8-26-26z" fill="#8E9FD8" opacity="0.85"></path>
+        <path d="M74 128l-16 24 8 6 16-24z" fill="#8E9FD8"></path>
+        <path d="M100 128l14 22-8 6-14-22z" fill="#8E9FD8"></path>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Der Gehängte</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#8E9FD8">Wandel · Geduld · Akzeptanz</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="pluto" data-screen-label="13 Der Tod" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">XIII</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <rect x="10" y="96" width="16" height="108" rx="4" fill="#C9954F" opacity="0.28"></rect>
+        <rect x="154" y="96" width="16" height="108" rx="4" fill="#C9954F" opacity="0.28"></rect>
+        <circle cx="90" cy="122" r="30" fill="#F5C94E" opacity="0.2"></circle>
+        <path d="M84 54c20 0 32 16 34 38l12 112H38l12-112c2-22 14-38 34-38z" fill="#C9954F"></path>
+        <path d="M84 68c-11 0-18 9-19 22 5 6 12 9 19 9s14-3 19-9c-1-13-8-22-19-22z" fill="#150F30" opacity="0.6"></path>
+        <path d="M132 60c22 8 32 26 30 44-10-14-22-20-34-20z" fill="#F5C94E" opacity="0.9"></path>
+        <rect x="126" y="66" width="6" height="138" rx="3" fill="#C9954F"></rect>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Der Tod</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#C9954F">Ende · Loslassen · Neubeginn</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="mercury" data-screen-label="14 Die Mäßigkeit" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">XIV</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <circle cx="90" cy="46" r="14" fill="#4FA6E0"></circle>
+        <path d="M76 62h28l16 60H60z" fill="#4FA6E0"></path>
+        <path d="M62 122h56l12 82H50z" fill="#4FA6E0" opacity="0.7"></path>
+        <path d="M74 72L26 42l8 48z" fill="#4FA6E0" opacity="0.4"></path>
+        <path d="M106 72l48-30-8 48z" fill="#4FA6E0" opacity="0.4"></path>
+        <g fill="#F5C94E">
+          <path d="M26 84h30l-6 26H32z"></path>
+          <path d="M124 132h30l-6 26h-18z"></path>
+          <path d="M54 108c14 6 60 14 76 26l-6 8c-16-12-58-20-74-26z" opacity="0.9"></path>
+        </g>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Die Mäßigkeit</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#4FA6E0">Maß · Abwägen · Entschleunigung</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="mars" data-screen-label="15 Der Teufel" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">XV</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <path d="M74 32c-6 6-8 14-6 22M106 32c6 6 8 14 6 22" stroke="#F2707A" stroke-width="6" fill="none" stroke-linecap="round"></path>
+        <circle cx="90" cy="66" r="16" fill="#F2707A"></circle>
+        <path d="M70 84h40l18 56H52z" fill="#F2707A"></path>
+        <path d="M110 92l26-24 7 7-26 30z" fill="#F2707A"></path>
+        <rect x="52" y="140" width="76" height="22" rx="4" fill="#F2707A" opacity="0.4"></rect>
+        <g fill="#F2707A" opacity="0.7">
+          <circle cx="34" cy="172" r="10"></circle>
+          <path d="M25 184h18l6 20H19z"></path>
+          <circle cx="146" cy="172" r="10"></circle>
+          <path d="M137 184h18l6 20h-30z"></path>
+        </g>
+        <g stroke="#C9954F" stroke-width="3.5" fill="none">
+          <path d="M60 156c-12 4-20 8-24 14"></path>
+          <path d="M120 156c12 4 20 8 24 14"></path>
+        </g>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Der Teufel</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#F2707A">Blockade · Warnung · Schatten</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="pluto" data-screen-label="16 Der Turm" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">XVI</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <path d="M64 74h52l10 130H54z" fill="#C9954F"></path>
+        <path d="M78 100h24v30H78z" fill="#150F30" opacity="0.55"></path>
+        <path d="M62 34h56l-6 16H68z" fill="#F5C94E" transform="rotate(-14 90 42)"></path>
+        <path d="M120 40l24-22-8 26 18-4-30 34 6-24z" fill="#F5C94E"></path>
+        <g fill="#C9954F" opacity="0.75">
+          <circle cx="26" cy="132" r="9"></circle>
+          <path d="M16 143h20l-4 26-20-6z"></path>
+          <circle cx="154" cy="158" r="9"></circle>
+          <path d="M144 169h20l-2 24-22-4z"></path>
+        </g>
+        <path d="M0 204h180v6H0z" fill="#C9C2E0" opacity="0.18"></path>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Der Turm</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#C9954F">Einschnitt · Erschütterung · Ausweg</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="saturn" data-screen-label="17 Der Stern" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">XVII</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <path d="M90 12l9 25 25 9-25 9-9 25-9-25-25-9 25-9z" fill="#F5C94E"></path>
+        <g fill="#F5C94E" opacity="0.5">
+          <path d="M32 44l4 11 11 4-11 4-4 11-4-11-11-4 11-4z"></path>
+          <path d="M148 60l4 11 11 4-11 4-4 11-4-11-11-4 11-4z"></path>
+        </g>
+        <circle cx="82" cy="106" r="13" fill="#D8CFE8"></circle>
+        <path d="M64 122h34l16 46H46z" fill="#D8CFE8"></path>
+        <path d="M96 128l24-4 4 12-26 6z" fill="#D8CFE8"></path>
+        <path d="M118 118h24l-6 22h-14z" fill="#D8CFE8" opacity="0.8"></path>
+        <path d="M126 140c-4 18-10 34-18 46l-9-5c8-13 14-25 18-41z" fill="#4FA6E0" opacity="0.85"></path>
+        <path d="M0 178h180v34H0z" fill="#4FA6E0" opacity="0.22"></path>
+        <path d="M20 190h48M96 198h56M40 206h60" stroke="#4FA6E0" stroke-width="4" stroke-linecap="round" opacity="0.5"></path>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Der Stern</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#F5C94E">Hoffnung · Erfüllung · Segen</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="moon" data-screen-label="18 Der Mond" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">XVIII</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <path d="M96 16a40 40 0 1 0 0 80 50 50 0 0 1 0-80z" fill="#F6A9C6"></path>
+        <path d="M22 96h20l6 88H16z" fill="#F6A9C6" opacity="0.4"></path>
+        <path d="M32 78l12 18H20z" fill="#F6A9C6" opacity="0.4"></path>
+        <path d="M138 96h20l6 88h-32z" fill="#F6A9C6" opacity="0.4"></path>
+        <path d="M148 78l12 18h-24z" fill="#F6A9C6" opacity="0.4"></path>
+        <g fill="#F6A9C6">
+          <ellipse cx="94" cy="158" rx="27" ry="13"></ellipse>
+          <circle cx="66" cy="138" r="12"></circle>
+          <path d="M58 132L44 118l7-6 14 14z"></path>
+          <path d="M70 126l-2-14 11 8z"></path>
+          <rect x="78" y="168" width="8" height="16" rx="3"></rect>
+          <rect x="104" y="168" width="8" height="16" rx="3"></rect>
+          <path d="M118 152l16-13 5 7-15 14z"></path>
+        </g>
+        <path d="M0 184h180v26H0z" fill="#4FA6E0" opacity="0.25"></path>
+        <g fill="#F6A9C6" opacity="0.8">
+          <ellipse cx="90" cy="198" rx="14" ry="8"></ellipse>
+          <path d="M78 194l-10-6M78 202l-10 6M102 194l10-6M102 202l10 6" stroke="#F6A9C6" stroke-width="3" stroke-linecap="round"></path>
+        </g>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Der Mond</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#F6A9C6">Unbewusstes · Intuition · Hingabe</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="venus" data-screen-label="19 Die Sonne" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">XIX</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <circle cx="90" cy="56" r="30" fill="#F5C94E"></circle>
+        <g stroke="#F5C94E" stroke-width="5" stroke-linecap="round">
+          <path d="M90 8v12M90 92v12M38 56H26M154 56h-12M53 19l-9-9M136 102l-9-9M127 19l9-9M44 102l9-9"></path>
+        </g>
+        <rect x="0" y="150" width="180" height="12" rx="4" fill="#F5943A" opacity="0.35"></rect>
+        <circle cx="90" cy="118" r="14" fill="#F5943A"></circle>
+        <path d="M76 134h28l12 46H64z" fill="#F5943A"></path>
+        <path d="M104 138l22-16 6 8-22 20z" fill="#F5943A"></path>
+        <path d="M76 138l-22-16-6 8 22 20z" fill="#F5943A"></path>
+        <rect x="70" y="180" width="12" height="30" rx="4" fill="#F5943A"></rect>
+        <rect x="98" y="180" width="12" height="30" rx="4" fill="#F5943A"></rect>
+        <g fill="#F5C94E" opacity="0.7">
+          <circle cx="24" cy="176" r="10"></circle>
+          <rect x="21" y="184" width="5" height="28" rx="2"></rect>
+          <circle cx="158" cy="184" r="10"></circle>
+          <rect x="155" y="192" width="5" height="20" rx="2"></rect>
+        </g>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Die Sonne</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#F5943A">Lebenskraft · Gelingen · Energie</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="uranus" data-screen-label="20 Das Gericht" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">XX</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <circle cx="66" cy="36" r="13" fill="#C8CDD1"></circle>
+        <path d="M54 52h26l10 44H44z" fill="#C8CDD1"></path>
+        <path d="M44 58L18 44l-6 12 30 14z" fill="#C8CDD1" opacity="0.6"></path>
+        <path d="M80 62l24-8 4 12-26 10z" fill="#C8CDD1"></path>
+        <g fill="#F5C94E">
+          <path d="M104 46l52-14v22l-52 8z"></path>
+          <rect x="98" y="50" width="12" height="18" rx="4"></rect>
+        </g>
+        <rect x="24" y="176" width="132" height="34" rx="5" fill="#C8CDD1" opacity="0.22"></rect>
+        <g fill="#C8CDD1">
+          <circle cx="52" cy="140" r="10"></circle>
+          <path d="M42 152h20l6 24H36z"></path>
+          <path d="M42 152l-14-22 7-5 14 20zM62 152l14-22 7 5-14 20z" opacity="0.85"></path>
+          <circle cx="118" cy="146" r="10"></circle>
+          <path d="M108 158h20l6 18h-32z"></path>
+          <path d="M108 158l-12-20 7-4 12 18zM128 158l12-20 7 4-12 18z" opacity="0.85"></path>
+        </g>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Das Gericht</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#C8CDD1">Prüfung · Abschluss · Klarheit</p>
+      </div>
+    </article>
+
+    <article data-mp-theme="jupiter" data-screen-label="21 Die Welt" style="display:flex;flex-direction:column;gap:14px;padding:18px 18px 20px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22)">
+      <div style="font-weight:600;font-size:11px;letter-spacing:0.2em;color:#F5C94E">XXI</div>
+      <svg viewBox="0 0 180 220" width="100%" style="display:block">
+        <ellipse cx="90" cy="110" rx="58" ry="82" fill="none" stroke="#6FBF8A" stroke-width="9"></ellipse>
+        <ellipse cx="90" cy="110" rx="58" ry="82" fill="none" stroke="#150F30" stroke-width="3" stroke-dasharray="10 12"></ellipse>
+        <circle cx="90" cy="72" r="13" fill="#6FBF8A"></circle>
+        <path d="M78 88h24l10 44H68z" fill="#6FBF8A"></path>
+        <path d="M102 94l24-14 5 9-24 18z" fill="#6FBF8A"></path>
+        <path d="M78 94L54 80l-5 9 24 18z" fill="#6FBF8A"></path>
+        <path d="M80 132l-14 42 11 4 14-34z" fill="#6FBF8A"></path>
+        <path d="M100 132l16 26-9 7-17-24z" fill="#6FBF8A"></path>
+        <g fill="#F5C94E" opacity="0.85">
+          <circle cx="18" cy="24" r="8"></circle>
+          <path d="M10 34h16l4 14H6z"></path>
+          <circle cx="162" cy="24" r="8"></circle>
+          <path d="M154 34h16l4 14h-24z"></path>
+          <circle cx="18" cy="184" r="8"></circle>
+          <path d="M10 194h16l4 14H6z"></path>
+          <circle cx="162" cy="184" r="8"></circle>
+          <path d="M154 194h16l4 14h-24z"></path>
+        </g>
+      </svg>
+      <div style="margin-top:auto;border-top:1px solid rgba(237,235,245,0.18);padding-top:14px">
+        <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:22px;line-height:1.2;color:#EDEBF5">Die Welt</h3>
+        <p style="margin:8px 0 0;font-weight:600;font-size:10px;line-height:1.6;letter-spacing:0.12em;text-transform:uppercase;color:#6FBF8A">Vollendung · Ankommen · Weitblick</p>
+      </div>
+    </article>
+
+  </section>
+
+  <sc-if value="{{ zeigeRueckseite }}" hint-placeholder-val="{{ true }}">
+  <section style="max-width:1180px;margin:0 auto;padding:80px 40px 0">
+    <div style="display:grid;grid-template-columns:236px 1fr;gap:48px;align-items:center">
+      <div style="display:flex;flex-direction:column;gap:18px;padding:26px;border-radius:14px;border:1px solid rgba(237,235,245,0.18);background:linear-gradient(158deg,#150F30 0%,#241A52 55%,#3A2A6B 100%);box-shadow:0 12px 32px rgba(30,22,64,0.22);aspect-ratio:236/400;align-items:center;justify-content:center">
+        <div style="width:132px;height:132px;border-radius:50%;border:1px solid rgba(245,201,78,0.55);display:flex;align-items:center;justify-content:center">
+          <div style="width:104px;height:104px;border-radius:50%;border:1px solid rgba(245,201,78,0.3);display:flex;align-items:center;justify-content:center;color:#F5C94E">
+            <x-import component-from-global-scope="MoonPowerDesignSystem_7b1e52.Glyph" id="moon" color="#F5C94E" size="{{ 46 }}" hint-size="46px,46px"></x-import>
+          </div>
+        </div>
+        <span style="font-family:Lora,serif;font-weight:700;font-size:15px;letter-spacing:1px;color:#EDEBF5">MOON POWER</span>
+        <span style="font-weight:600;font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:#9C93C4">Große Arkana</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;max-width:620px">
+        <span style="font-weight:600;font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:#7A7389">Rückseite</span>
+        <h2 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:28px;line-height:1.3;color:#171422">Für alle 22 Karten gleich</h2>
+        <p style="margin:0;font-size:17px;line-height:1.65;color:#4E4760;text-wrap:pretty">Der Mond in zwei konzentrischen Goldringen, darunter die Wortmarke. Keine Richtung, kein Oben und Unten — so verrät die Rückseite beim Legen nichts über die Karte.</p>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <sc-if value="{{ zeigeBegleitheft }}" hint-placeholder-val="{{ true }}">
+  <section style="margin-top:80px;background:linear-gradient(158deg,#150F30 0%,#241A52 58%,#3A2A6B 100%);color:#EDEBF5">
+    <div style="max-width:1180px;margin:0 auto;padding:80px 40px">
+      <span style="display:block;font-weight:600;font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:#9C93C4">Begleitheft</span>
+      <h2 style="margin:12px 0 0;font-family:Lora,serif;font-weight:600;font-size:28px;line-height:1.3;color:#EDEBF5">Die Bedeutungen im Überblick</h2>
+      <p style="margin:16px 0 0;max-width:620px;font-size:17px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Jede Karte kann positiv, neutral oder negativ gelesen werden. Was gilt, ergibt sich aus der Frage, dem Legemuster und den Karten daneben.</p>
+
+      <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:40px 48px">
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">0</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Der Narr</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Ein junger Mensch, der unbekümmert seines Weges geht. Die Karte steht für Leichtigkeit und Aufbruch — je nach Umfeld auch für mangelnde Ernsthaftigkeit.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">I</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Der Magier</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Selbsterkenntnis, Wissen und Gestaltungskraft. Er versteht die Prinzipien des Lebens und wendet sie an — kann aber auch für Überheblichkeit stehen.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">II</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Die Hohepriesterin</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Die weibliche Kraft an sich. Ihre Macht kommt aus der Intuition und der Gabe, durch den Schleier zu sehen. Eine wissende Frau, die Dinge durchschaut.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">III</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Die Herrscherin</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Fülle, Reife und Vollendung, dazu eine mütterliche Dimension und große Stärke. Im Negativen ein Mensch, der seine Macht ausnutzt.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">IV</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Der Herrscher</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Herrschaft, Kontrolle und Verantwortung. Eine sachliche, geradlinige Karte: leiten und führen. Sie kann auch eine Respektperson bezeichnen.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">V</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Der Hierophant</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Sinn, Wahrheit und die Gesetze des Lebens — eigene Überzeugungen ebenso wie große Sinnfragen. Zugleich die Aufforderung, Vorbilder zu hinterfragen.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">VI</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Die Liebenden</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Liebe und die Verbindung zwischen Menschen. Nicht nur romantisch — auch Freundschaft, Partnerschaft, Zugehörigkeit und Zuneigung.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">VII</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Der Wagen</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Der einfahrende Triumphwagen: Bewegung, Entwicklung und Chancen. Wichtig ist, wo er steht — am Start, auf dem Weg oder schon auf der Zielgeraden.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">VIII</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Die Gerechtigkeit</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Gerechtigkeit, Ausgleich und Wahrheit. An der Wahrheit ist kein Vorbeikommen — das kann Hoffnung machen oder eine Warnung sein.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">IX</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Der Eremit</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Rückzug aus der Welt und innere Einkehr. Antrieb kann Verletzung sein, ebenso Wahrheitssuche und Wachstum. Die Karte steht dafür, den eigenen Weg zu gehen.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">X</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Das Rad des Schicksals</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Der ewige Kreislauf und karmische Muster. Sie zeigt ein Thema von zentraler Bedeutung an — und daran, dass man das Steuer selbst in der Hand hat.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">XI</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Die Kraft</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Mut, persönliche Stärke und Aussicht auf Erfolg. Gemeint ist keine aggressive Kraft, sondern innere Stärke — und ein Hinweis, wo Energie sich lohnt.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">XII</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Der Gehängte</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Ein Einschnitt, der Transformation bedeuten kann. Geduld, innere Ruhe und Akzeptanz helfen, die Krise zu überstehen und verändert daraus hervorzugehen.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">XIII</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Der Tod</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Nicht der physische Tod, sondern Ablösung, Loslassen, ein Ende. Jedes Ende bringt einen Anfang mit sich — die Karten daneben zeigen, worauf sich der Wandel bezieht.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">XIV</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Die Mäßigkeit</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Die sanfte Ratgeberin: langsam angehen, wachen Geist behalten, auf das rechte Maß achten. Beide Seiten abwägen führt zur klugen Entscheidung.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">XV</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Der Teufel</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Eine hilfreiche Warnung: Blockaden, Hindernisse, Schwierigkeiten — oder ein Mensch, dem nicht zu trauen ist. Auch das eigene Verhalten gehört geprüft.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">XVI</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Der Turm</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Eine warnende Karte: Zerstörung, Fall, aber auch innere Gefangenschaft. Sie zeigt Einschnitte an und regt an, über den Ausweg nachzudenken.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">XVII</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Der Stern</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Erfüllung, Schönheit und Glück. Eine Glückskarte, die gutes Gelingen und Segen anzeigt — ein Stern der Hoffnung, ein Stern, der leitet.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">XVIII</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Der Mond</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Das Unbewusste, die Intuition, der Kontakt zur eigenen Seele. Eine Karte der Ruhe und Hingabe, die ermuntert, sich auch schwierigen Themen zu stellen.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">XIX</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Die Sonne</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Licht- und Wärmespenderin, Inbegriff von Lebenskraft. Eine Karte voll Energie und Schaffenskraft — ein Hinweis auf gutes Gelingen, innen wie außen.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">XX</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Das Gericht</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Die Dinge — oder sich selbst — genau prüfen. Zugleich ein Abschluss: Ehrlichkeit und Sachlichkeit helfen, etwas klar zu Ende zu bringen.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:18px">
+          <span style="flex:0 0 46px;font-family:Lora,serif;font-size:17px;color:#F5C94E;padding-top:2px">XXI</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h3 style="margin:0;font-family:Lora,serif;font-weight:600;font-size:17px;line-height:1.3;color:#EDEBF5">Die Welt</h3>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#C9C2E0;text-wrap:pretty">Vollendung, Erfolg und alles, was Bestand hat: Verwirklichtes, Angekommensein, Reife. Auch ein Hinweis, mit Distanz auf das große Ganze zu schauen.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <footer style="background:#1E1640;color:#C9C2E0">
+    <div style="max-width:1180px;margin:0 auto;padding:40px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center">
+      <span style="display:flex;align-items:center;gap:10px;font-family:Lora,serif;font-weight:700;font-size:14px;letter-spacing:1px;color:#EDEBF5"><span style="color:#F5C94E;font-size:18px">☾</span>MOON POWER</span>
+      <span style="font-weight:600;font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:#6B6193">22 Karten · Große Arkana</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;zeigeRueckseite&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Abschnitte&quot;},&quot;zeigeBegleitheft&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Abschnitte&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      zeigeRueckseite: this.props.zeigeRueckseite ?? true,
+      zeigeBegleitheft: this.props.zeigeBegleitheft ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>

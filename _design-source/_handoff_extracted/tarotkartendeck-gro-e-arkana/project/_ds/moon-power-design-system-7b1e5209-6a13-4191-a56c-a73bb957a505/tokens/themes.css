@@ -1,0 +1,72 @@
+/* Moon Power — the nine Farb-IDs as theme scopes.
+   Put data-mp-theme="<id>" on any wrapper and everything inside adopts that voice.
+
+   --accent-hue    the ID's signature swatch, verbatim from the brand book
+   --accent-primary a legibility-safe rendering of that hue for text and 1px rules
+   --accent-soft   tinted surface for that voice
+   --accent-deep   the ID's dark swatch
+   --accent-on     text colour that sits on --accent-hue */
+
+[data-mp-theme="moon"] {
+  --accent-hue: var(--mp-blossom-pink);
+  --accent-primary: var(--mp-moon-ink);
+  --accent-soft: #FDEDF3;
+  --accent-deep: #7C2F4C;
+  --accent-on: var(--mp-ink-900);
+}
+[data-mp-theme="mercury"] {
+  --accent-hue: var(--mp-mercury-blue);
+  --accent-primary: #1F79B8;
+  --accent-soft: var(--mp-ice-white);
+  --accent-deep: var(--mp-deep-navy);
+  --accent-on: var(--mp-ink-900);
+}
+[data-mp-theme="mars"] {
+  --accent-hue: var(--mp-flame-red);
+  --accent-primary: #C42734;
+  --accent-soft: var(--mp-shrine-white);
+  --accent-deep: var(--mp-ember-black);
+  --accent-on: var(--mp-pure-white);
+}
+[data-mp-theme="jupiter"] {
+  --accent-hue: var(--mp-forest-green);
+  --accent-primary: #2F7549;
+  --accent-soft: #EDF6F0;
+  --accent-deep: var(--mp-bark-brown);
+  --accent-on: var(--mp-pure-white);
+}
+[data-mp-theme="venus"] {
+  --accent-hue: var(--mp-sunset-orange);
+  --accent-primary: #C46B18;
+  --accent-soft: #FDF1E4;
+  --accent-deep: #8A4A11;
+  --accent-on: var(--mp-ink-900);
+}
+[data-mp-theme="uranus"] {
+  --accent-hue: var(--mp-steel-teal);
+  --accent-primary: var(--mp-steel-teal);
+  --accent-soft: #EAF1F3;
+  --accent-deep: var(--mp-charcoal);
+  --accent-on: var(--mp-pure-white);
+}
+[data-mp-theme="neptune"] {
+  --accent-hue: var(--mp-aqua-violet);
+  --accent-primary: var(--mp-deep-ocean-blue);
+  --accent-soft: var(--mp-pearl);
+  --accent-deep: #1B3459;
+  --accent-on: var(--mp-pure-white);
+}
+[data-mp-theme="pluto"] {
+  --accent-hue: var(--mp-garnet-wine);
+  --accent-primary: var(--mp-garnet-wine);
+  --accent-soft: #F6EDF1;
+  --accent-deep: var(--mp-midnight-navy);
+  --accent-on: var(--mp-pure-white);
+}
+[data-mp-theme="saturn"] {
+  --accent-hue: var(--mp-royal-violet);
+  --accent-primary: var(--mp-royal-violet);
+  --accent-soft: #F1ECF8;
+  --accent-deep: var(--mp-deep-plum);
+  --accent-on: var(--mp-pure-white);
+}

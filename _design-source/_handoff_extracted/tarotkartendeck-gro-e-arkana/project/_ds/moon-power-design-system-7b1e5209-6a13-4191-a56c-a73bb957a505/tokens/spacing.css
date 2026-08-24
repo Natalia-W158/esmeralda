@@ -1,0 +1,29 @@
+/* Moon Power — spacing & measure. 4px base; sections breathe at 80px. */
+:root {
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 26px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 56px;
+  --space-10: 72px;
+  --space-11: 88px;
+  --space-12: 112px;
+
+  --gap-inline: 14px;
+  --gap-card: 18px;
+  --gap-section: 80px;
+
+  --page-max: 1180px;
+  --page-gutter: 40px;
+  --measure-intro: 620px;
+  --measure-body: 66ch;
+
+  --control-h-sm: 30px;
+  --control-h-md: 38px;
+  --control-h-lg: 46px;
+}

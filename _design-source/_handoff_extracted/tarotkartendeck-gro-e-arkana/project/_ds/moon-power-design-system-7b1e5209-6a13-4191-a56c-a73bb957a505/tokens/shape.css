@@ -1,0 +1,16 @@
+/* Moon Power — corner radii & borders.
+   The rule: things you press are round (pill), things that hold content are soft
+   rectangles. Buttons, tabs, tags, badges → --radius-pill. Cards, dialogs,
+   images → --radius-md/lg. Fields → --radius-sm. */
+:root {
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  --border-width: 1px;
+  --border-width-strong: 2px;
+  --accent-bar-width: 4px;
+}

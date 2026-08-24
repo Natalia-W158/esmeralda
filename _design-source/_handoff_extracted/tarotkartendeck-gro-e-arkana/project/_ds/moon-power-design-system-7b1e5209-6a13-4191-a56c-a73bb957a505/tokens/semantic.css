@@ -1,0 +1,57 @@
+/* Moon Power — semantic aliases. Components reference ONLY these (plus --accent-*),
+   never the raw --mp-* palette, so a surface can be re-themed in one place. */
+:root {
+  /* Surfaces */
+  --surface-page: var(--mp-cloud-white);
+  --surface-card: var(--mp-pure-white);
+  --surface-subtle: #F4F2FA;
+  --surface-sunken: var(--mp-moonlight-pearl);
+  --surface-inverse: var(--mp-cosmos-indigo);
+  --surface-action: var(--mp-crescent-gold);
+  --surface-cosmos-gradient:
+    radial-gradient(120% 90% at 82% 8%, rgba(245, 201, 78, 0.16) 0%, rgba(245, 201, 78, 0) 55%),
+    linear-gradient(158deg, var(--mp-cosmos-900) 0%, var(--mp-cosmos-700) 52%, var(--mp-cosmos-500) 100%);
+  --surface-moon-glow: radial-gradient(60% 60% at 50% 40%, rgba(245, 201, 78, 0.22) 0%, rgba(245, 201, 78, 0) 70%);
+
+  /* Text */
+  --text-strong: var(--mp-ink-900);
+  --text-body: var(--mp-ink-800);
+  --text-muted: var(--mp-ink-600);
+  --text-subtle: var(--mp-ink-400);
+  --text-eyebrow: var(--mp-ink-400);
+  --text-inverse: var(--mp-moonlight-pearl);
+  --text-on-action: var(--mp-cosmos-indigo);
+  --text-link: var(--mp-cosmos-700);
+  --text-link-hover: var(--mp-crescent-gold-deep);
+  --text-disabled: var(--mp-ink-200);
+
+  /* Borders */
+  --border-default: var(--mp-lavender-100);
+  --border-strong: var(--mp-lavender-200);
+  --border-inverse: rgba(237, 235, 245, 0.18);
+  --border-field: var(--mp-lavender-200);
+  --border-field-hover: var(--mp-twilight-500);
+
+  /* Interaction */
+  --focus-ring: var(--shadow-focus);
+  --overlay-hover: rgba(30, 22, 64, 0.05);
+  --overlay-press: rgba(30, 22, 64, 0.1);
+  --overlay-hover-inverse: rgba(237, 235, 245, 0.1);
+
+  /* Status — borrowed from the Farb-IDs, never invented */
+  --status-success: var(--mp-forest-green);
+  --status-success-surface: #EBF5EF;
+  --status-warning: var(--mp-sunset-orange);
+  --status-warning-surface: #FDF1E4;
+  --status-danger: var(--mp-flame-red);
+  --status-danger-surface: var(--mp-shrine-white);
+  --status-info: var(--mp-mercury-blue);
+  --status-info-surface: var(--mp-ice-white);
+
+  /* Default accent = Mond, the master-brand voice. Overridden by [data-mp-theme]. */
+  --accent-primary: var(--mp-moon-ink);
+  --accent-hue: var(--mp-blossom-pink);
+  --accent-soft: #FDEDF3;
+  --accent-deep: #7C2F4C;
+  --accent-on: var(--mp-pure-white);
+}

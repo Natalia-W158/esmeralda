@@ -1,0 +1,46 @@
+/* Moon Power — typography.
+   Two families only: Lora carries voice and emotion, Poppins carries information.
+   Never a third family; monospace appears only in placeholders and spec labels. */
+:root {
+  --font-serif-display: "Lora", Georgia, "Times New Roman", serif;
+  --font-sans: "Poppins", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --text-2xs: 9.5px;
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-md: 14px;
+  --text-lg: 17px;
+  --text-xl: 22px;
+  --text-2xl: 28px;
+  --text-3xl: 36px;
+  --text-4xl: 46px;
+
+  --leading-tight: 1.12;
+  --leading-snug: 1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  --tracking-display: -0.01em;
+  --tracking-normal: 0;
+  --tracking-ui: 0.08em;
+  --tracking-wide: 0.12em;
+  --tracking-eyebrow: 0.2em;
+
+  /* Composite `font:` shorthands — the fastest correct way to set a role. */
+  --type-h1: var(--weight-bold) var(--text-4xl)/var(--leading-tight) var(--font-serif-display);
+  --type-h2: var(--weight-semibold) var(--text-2xl)/var(--leading-snug) var(--font-serif-display);
+  --type-h3: var(--weight-semibold) var(--text-lg)/var(--leading-snug) var(--font-serif-display);
+  --type-quote: italic var(--weight-regular) var(--text-lg)/var(--leading-normal) var(--font-serif-display);
+  --type-body-lg: var(--weight-regular) var(--text-lg)/var(--leading-relaxed) var(--font-sans);
+  --type-body: var(--weight-regular) var(--text-md)/var(--leading-relaxed) var(--font-sans);
+  --type-body-sm: var(--weight-regular) var(--text-sm)/var(--leading-normal) var(--font-sans);
+  --type-ui: var(--weight-semibold) var(--text-sm)/1 var(--font-sans);
+  --type-caption: var(--weight-semibold) var(--text-xs)/var(--leading-snug) var(--font-sans);
+  --type-mono: var(--weight-regular) var(--text-xs)/var(--leading-snug) var(--font-mono);
+}
