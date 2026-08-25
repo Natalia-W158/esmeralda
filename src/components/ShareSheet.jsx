@@ -16,11 +16,6 @@ const CHANNELS = [
     href: (text, url) => `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`,
   },
   {
-    key: 'x',
-    label: 'X',
-    href: (text, url) => `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${text} ${url}`)}`,
-  },
-  {
     key: 'facebook',
     label: 'Facebook',
     href: (text, url) => `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`,
@@ -32,10 +27,20 @@ const CHANNELS = [
   },
 ];
 
+async function copyToClipboard(value) {
+  try {
+    await navigator.clipboard.writeText(value);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 export default function ShareSheet({ card, onClose }) {
-  const [copied, setCopied] = useState(false);
+  const [copiedKey, setCopiedKey] = useState(null);
   const text = buildShareText(card);
   const url = typeof window !== 'undefined' ? window.location.href : '';
+  const fullText = `${text}\n\n${url}`;
   const canNativeShare = typeof navigator !== 'undefined' && !!navigator.share;
 
   const handleNativeShare = async () => {
@@ -47,14 +52,23 @@ export default function ShareSheet({ card, onClose }) {
     }
   };
 
+  const flashCopied = (key, durationMs) => {
+    setCopiedKey(key);
+    setTimeout(() => setCopiedKey(null), durationMs);
+  };
+
   const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(`${text}\n\n${url}`);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      // Zwischenablage nicht verfügbar — stiller Fehlschlag, Button bleibt unverändert.
-    }
+    if (await copyToClipboard(fullText)) flashCopied('text', 2000);
+  };
+
+  const handleInstagram = async () => {
+    // Instagram bietet keine Web-Freigabe-URL mit vorbefülltem Text — Tab
+    // muss synchron im Klick-Handler geöffnet werden, sonst blockt der
+    // Popup-Blocker (kein window.open nach einem await mehr). Danach den
+    // Text zum Einfügen in die Zwischenablage kopieren.
+    window.open('https://www.instagram.com/', '_blank', 'noopener,noreferrer');
+    flashCopied('instagram', 2500);
+    await copyToClipboard(fullText);
   };
 
   return (
@@ -83,8 +97,11 @@ export default function ShareSheet({ card, onClose }) {
               {channel.label}
             </a>
           ))}
+          <button type="button" className="share-sheet__channel" onClick={handleInstagram}>
+            {copiedKey === 'instagram' ? 'Kopiert – einfügen' : 'Instagram'}
+          </button>
           <button type="button" className="share-sheet__channel" onClick={handleCopy}>
-            {copied ? 'Kopiert ✓' : 'Text kopieren'}
+            {copiedKey === 'text' ? 'Kopiert ✓' : 'Text kopieren'}
           </button>
         </div>
       </div>
