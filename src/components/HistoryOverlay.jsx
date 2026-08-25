@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { getHistoryFor } from '../lib/history';
+import { getMoonPhase } from '../lib/moonPhase';
+import MoonPhaseIcon from './MoonPhaseIcon';
 
 function formatDate(iso) {
   return new Date(iso).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
@@ -81,15 +83,24 @@ export default function HistoryOverlay({ onClose }) {
           <p className="history-overlay__empty">Keine Karten gefunden für „{query}".</p>
         ) : (
           <ul className="history-overlay__list">
-            {filtered.map((entry, i) => (
-              <li key={i} className="history-overlay__row">
-                <span className="history-overlay__roman" style={{ color: entry.accent }}>{entry.roman}</span>
-                <span className="history-overlay__info">
-                  <span className="history-overlay__card-title">{entry.title}</span>
-                  <span className="history-overlay__date">{formatDate(entry.drawnAt)}</span>
-                </span>
-              </li>
-            ))}
+            {filtered.map((entry, i) => {
+              const moon = getMoonPhase(new Date(entry.drawnAt));
+              return (
+                <li key={i} className="history-overlay__row">
+                  <span className="history-overlay__roman" style={{ color: entry.accent }}>{entry.roman}</span>
+                  <span className="history-overlay__info">
+                    <span className="history-overlay__card-title">{entry.title}</span>
+                    <span className="history-overlay__meta">
+                      <span className="history-overlay__date">{formatDate(entry.drawnAt)}</span>
+                      <span className="history-overlay__moon">
+                        <MoonPhaseIcon phase={moon.phase} />
+                        {moon.name}
+                      </span>
+                    </span>
+                  </span>
+                </li>
+              );
+            })}
           </ul>
         )}
       </div>
