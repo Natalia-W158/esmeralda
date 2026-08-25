@@ -22,8 +22,10 @@ export default function WelcomeBubble() {
   return (
     <div className="welcome-bubble-slot">
       <div className={`welcome-bubble welcome-bubble--${phase}`}>
-        Willkommen, du spirituelles Wesen.
-        <span className="welcome-bubble__tail" />
+        <svg className="welcome-bubble__tail" viewBox="0 0 34 36" width="26" height="32">
+          <path d="M9 1 C15 13 15 25 13 35 C25 25 27 13 21 1 Z" />
+        </svg>
+        <span className="welcome-bubble__text">Willkommen, du spirituelles Wesen.</span>
       </div>
     </div>
   );
