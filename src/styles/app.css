@@ -11,7 +11,59 @@
 }
 
 .app__sky {
+  position: relative;
   width: min(420px, 82vw);
+}
+
+.welcome-bubble-slot {
+  position: absolute;
+  top: -6%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.welcome-bubble {
+  position: relative;
+  max-width: 220px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: var(--mp-crescent-gold-soft);
+  color: var(--mp-cosmos-indigo);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 13.5px;
+  line-height: 1.45;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(21, 15, 48, 0.35);
+  opacity: 0;
+  transform: scale(0.85) translateY(8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.welcome-bubble--visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.welcome-bubble--leaving {
+  opacity: 0;
+  transform: scale(0.92) translateY(-4px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.welcome-bubble__tail {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: var(--mp-crescent-gold-soft);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
 }
 
 .esmeralda {

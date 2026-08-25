@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Esmeralda from './components/Esmeralda';
+import WelcomeBubble from './components/WelcomeBubble';
 import CardOverlay from './components/CardOverlay';
 import { cards } from './data/cards';
 
@@ -25,6 +26,7 @@ export default function App() {
   return (
     <div className="app">
       <div className="app__sky">
+        <WelcomeBubble />
         <Esmeralda shuffling={shuffling} />
       </div>
 
