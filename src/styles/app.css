@@ -862,6 +862,56 @@
   color: var(--mp-twilight-500);
 }
 
+/* ---------- Cookie-Hinweis ---------- */
+
+.cookie-notice {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 40;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 18px 22px;
+  border-radius: 16px;
+  background: linear-gradient(158deg, #150F30 0%, #241A52 58%, #3A2A6B 100%);
+  border: 1px solid rgba(237, 235, 245, 0.16);
+  box-shadow: 0 20px 50px rgba(10, 7, 24, 0.55);
+  animation: overlay-rise 0.3s ease;
+}
+
+.cookie-notice__text {
+  flex: 1 1 320px;
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--mp-twilight-300);
+}
+
+.cookie-notice__button {
+  flex: 0 0 auto;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mp-cosmos-indigo);
+  background: var(--mp-crescent-gold);
+  border: none;
+  border-radius: 999px;
+  padding: 11px 22px;
+  cursor: pointer;
+}
+
+.cookie-notice__button:hover {
+  background: var(--mp-crescent-gold-deep);
+  color: var(--mp-moonlight-pearl);
+}
+
 @media (min-width: 720px) {
   .app {
     flex-direction: row;

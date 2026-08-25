@@ -4,6 +4,7 @@ import WelcomeBubble from './components/WelcomeBubble';
 import CardOverlay from './components/CardOverlay';
 import AccountMenu from './components/AccountMenu';
 import LoginButton from './components/LoginButton';
+import CookieNotice from './components/CookieNotice';
 import { useAuth } from './contexts/AuthContext';
 import { addHistoryEntry } from './lib/history';
 import { cards } from './data/cards';
@@ -69,6 +70,8 @@ export default function App() {
       {overlayCard && (
         <CardOverlay card={overlayCard} onClose={() => setOverlayCard(null)} />
       )}
+
+      <CookieNotice />
     </div>
   );
 }
