@@ -136,27 +136,41 @@
   color: var(--mp-twilight-300);
 }
 
+.app__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+@media (min-width: 600px) {
+  .app__actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
 .app__shuffle {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 13px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--mp-cosmos-indigo);
-  background: var(--mp-crescent-gold);
-  border: none;
+  text-align: center;
+  color: var(--mp-twilight-300);
+  background: transparent;
+  border: 1px solid rgba(237, 235, 245, 0.24);
   border-radius: 999px;
-  padding: 18px 40px;
+  padding: 16px 24px;
+  min-width: 200px;
   cursor: pointer;
-  box-shadow: 0 14px 30px rgba(245, 201, 78, 0.22);
-  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
 .app__shuffle:hover:not(:disabled) {
-  background: var(--mp-crescent-gold-deep);
   color: var(--mp-moonlight-pearl);
-  transform: translateY(-2px);
-  box-shadow: 0 18px 34px rgba(245, 201, 78, 0.28);
+  border-color: rgba(237, 235, 245, 0.4);
+  background: rgba(237, 235, 245, 0.06);
 }
 
 .app__shuffle:disabled {
@@ -470,22 +484,26 @@
 .app__login {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--mp-twilight-300);
-  background: transparent;
-  border: 1px solid rgba(237, 235, 245, 0.24);
+  text-align: center;
+  color: var(--mp-cosmos-indigo);
+  background: var(--mp-crescent-gold);
+  border: none;
   border-radius: 999px;
-  padding: 10px 22px;
+  padding: 16px 24px;
+  min-width: 200px;
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  box-shadow: 0 14px 30px rgba(245, 201, 78, 0.22);
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
 }
 
 .app__login:hover {
+  background: var(--mp-crescent-gold-deep);
   color: var(--mp-moonlight-pearl);
-  border-color: rgba(237, 235, 245, 0.4);
-  background: rgba(237, 235, 245, 0.06);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(245, 201, 78, 0.28);
 }
 
 /* ---------- Account-Menü (oben rechts) ---------- */

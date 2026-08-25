@@ -57,11 +57,13 @@ export default function App() {
           </p>
         </div>
 
-        <button className="app__shuffle" onClick={handleShuffle} disabled={shuffling}>
-          {shuffling ? 'Esmeralda mischt …' : 'Karten mischen'}
-        </button>
+        <div className="app__actions">
+          <button className="app__shuffle" onClick={handleShuffle} disabled={shuffling}>
+            {shuffling ? 'Esmeralda mischt …' : 'Karten mischen'}
+          </button>
 
-        <LoginButton onLoggedIn={handleLoggedIn} />
+          <LoginButton onLoggedIn={handleLoggedIn} />
+        </div>
       </div>
 
       {overlayCard && (
