@@ -9,6 +9,7 @@ function formatDate(iso) {
 export default function HistoryOverlay({ onClose }) {
   const { user } = useAuth();
   const [sortBy, setSortBy] = useState('date');
+  const [query, setQuery] = useState('');
   const entries = useMemo(() => getHistoryFor(user.email), [user.email]);
 
   const sorted = useMemo(() => {
@@ -21,6 +22,14 @@ export default function HistoryOverlay({ onClose }) {
     return copy;
   }, [entries, sortBy]);
 
+  const filtered = useMemo(() => {
+    const term = query.trim().toLowerCase();
+    if (!term) return sorted;
+    return sorted.filter(
+      (entry) => entry.title.toLowerCase().includes(term) || entry.keywords.toLowerCase().includes(term),
+    );
+  }, [sorted, query]);
+
   return (
     <div className="history-overlay" role="dialog" aria-modal="true" aria-label="Deine Tarot-Historie">
       <div className="history-overlay__backdrop" onClick={onClose} />
@@ -28,6 +37,26 @@ export default function HistoryOverlay({ onClose }) {
         <button className="overlay__close" onClick={onClose} aria-label="Schließen">×</button>
         <span className="overlay__eyebrow">Historie</span>
         <h3 className="history-overlay__title">Deine gezogenen Tageskarten</h3>
+
+        <div className="history-overlay__search">
+          <input
+            type="text"
+            className="history-overlay__search-input"
+            placeholder="Karte suchen …"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          {query && (
+            <button
+              type="button"
+              className="history-overlay__search-clear"
+              onClick={() => setQuery('')}
+              aria-label="Suche zurücksetzen"
+            >
+              ×
+            </button>
+          )}
+        </div>
 
         <div className="history-overlay__sort">
           <button
@@ -46,11 +75,13 @@ export default function HistoryOverlay({ onClose }) {
           </button>
         </div>
 
-        {sorted.length === 0 ? (
+        {entries.length === 0 ? (
           <p className="history-overlay__empty">Noch keine Karten gezogen, seit du angemeldet bist.</p>
+        ) : filtered.length === 0 ? (
+          <p className="history-overlay__empty">Keine Karten gefunden für „{query}".</p>
         ) : (
           <ul className="history-overlay__list">
-            {sorted.map((entry, i) => (
+            {filtered.map((entry, i) => (
               <li key={i} className="history-overlay__row">
                 <span className="history-overlay__roman" style={{ color: entry.accent }}>{entry.roman}</span>
                 <span className="history-overlay__info">
