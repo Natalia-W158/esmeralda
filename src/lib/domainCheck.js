@@ -8,7 +8,12 @@ export async function domainAcceptsMail(domain) {
     if (!res.ok) return 'unknown';
     const data = await res.json();
     if (data.Status !== 0) return 'invalid';
-    return Array.isArray(data.Answer) && data.Answer.length > 0 ? 'valid' : 'invalid';
+    const records = Array.isArray(data.Answer) ? data.Answer : [];
+    if (records.length === 0) return 'invalid';
+    // RFC 7505: eine einzelne MX-Antwort auf "." ist ein expliziter Null-MX-Record
+    // ("diese Domain nimmt bewusst keine Mails an") und zählt daher als ungültig.
+    const isNullMx = records.length === 1 && /(^|\s)\.\s*$/.test(records[0].data ?? '');
+    return isNullMx ? 'invalid' : 'valid';
   } catch {
     return 'unknown';
   }

@@ -46,6 +46,14 @@ export default function LoginModal({ onClose, onLoggedIn }) {
       setError('Bitte eine gültige E-Mail-Adresse eingeben.');
       return;
     }
+    if (domainStatus === 'checking') {
+      setError('Anbieter wird noch geprüft — bitte kurz warten.');
+      return;
+    }
+    if (domainStatus === 'invalid') {
+      setError('Diese E-Mail-Domain scheint keine E-Mails zu empfangen. Bitte überprüfe die Adresse.');
+      return;
+    }
     setError('');
     const nextUser = login({ firstName, lastName, email });
     onLoggedIn(nextUser);
@@ -95,8 +103,15 @@ export default function LoginModal({ onClose, onLoggedIn }) {
               ⚠ Diese Domain scheint keine E-Mails zu empfangen.
             </p>
           )}
+          {domainStatus === 'unknown' && (
+            <p className="login-modal__domain-hint login-modal__domain-hint--warn">
+              ⚠ Anbieter konnte nicht geprüft werden (z. B. durch einen Werbe-/Trackingblocker).
+            </p>
+          )}
           {error && <p className="login-modal__error">{error}</p>}
-          <button type="submit" className="login-modal__submit">Anmelden</button>
+          <button type="submit" className="login-modal__submit" disabled={domainStatus === 'checking'}>
+            {domainStatus === 'checking' ? 'Prüfe Anbieter …' : 'Anmelden'}
+          </button>
         </form>
 
         <p className="login-modal__google-note">Anmeldung mit Google folgt, sobald ein echtes Backend angebunden ist.</p>

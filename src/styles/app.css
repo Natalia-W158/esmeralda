@@ -722,8 +722,13 @@
   cursor: pointer;
 }
 
-.login-modal__submit:hover {
+.login-modal__submit:hover:not(:disabled) {
   background: var(--mp-crescent-gold-deep);
+}
+
+.login-modal__submit:disabled {
+  cursor: default;
+  opacity: 0.6;
 }
 
 .login-modal__google-note {
