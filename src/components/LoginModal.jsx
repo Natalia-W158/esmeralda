@@ -1,5 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
+import { domainAcceptsMail } from '../lib/domainCheck';
+
+const NAME_PATTERN = /^[\p{L}][\p{L}\s'-]*$/u;
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function LoginModal({ onClose, onLoggedIn }) {
   const { login } = useAuth();
@@ -7,6 +11,22 @@ export default function LoginModal({ onClose, onLoggedIn }) {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
+  const [domainStatus, setDomainStatus] = useState('idle'); // idle | checking | valid | invalid | unknown
+
+  // Hintergrund-Check: hat die eingegebene Mail-Domain überhaupt Mailserver?
+  useEffect(() => {
+    const domain = email.split('@')[1];
+    if (!EMAIL_PATTERN.test(email) || !domain) {
+      setDomainStatus('idle');
+      return;
+    }
+    setDomainStatus('checking');
+    const timer = setTimeout(async () => {
+      const result = await domainAcceptsMail(domain);
+      setDomainStatus(result);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, [email]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,10 +34,19 @@ export default function LoginModal({ onClose, onLoggedIn }) {
       setError('Bitte alle Felder ausfüllen.');
       return;
     }
-    if (!/^\S+@\S+\.\S+$/.test(email)) {
+    if (!NAME_PATTERN.test(firstName.trim())) {
+      setError('Der Vorname darf nur aus Buchstaben bestehen.');
+      return;
+    }
+    if (!NAME_PATTERN.test(lastName.trim())) {
+      setError('Der Nachname darf nur aus Buchstaben bestehen.');
+      return;
+    }
+    if (!EMAIL_PATTERN.test(email.trim())) {
       setError('Bitte eine gültige E-Mail-Adresse eingeben.');
       return;
     }
+    setError('');
     const nextUser = login({ firstName, lastName, email });
     onLoggedIn(nextUser);
   };
@@ -55,6 +84,17 @@ export default function LoginModal({ onClose, onLoggedIn }) {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
+          {domainStatus === 'checking' && (
+            <p className="login-modal__domain-hint">Prüfe Anbieter …</p>
+          )}
+          {domainStatus === 'valid' && (
+            <p className="login-modal__domain-hint login-modal__domain-hint--ok">✓ Anbieter erkannt</p>
+          )}
+          {domainStatus === 'invalid' && (
+            <p className="login-modal__domain-hint login-modal__domain-hint--warn">
+              ⚠ Diese Domain scheint keine E-Mails zu empfangen.
+            </p>
+          )}
           {error && <p className="login-modal__error">{error}</p>}
           <button type="submit" className="login-modal__submit">Anmelden</button>
         </form>

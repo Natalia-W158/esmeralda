@@ -693,6 +693,20 @@
   color: #F2707A;
 }
 
+.login-modal__domain-hint {
+  margin: -2px 0 0;
+  font-size: 11.5px;
+  color: var(--mp-twilight-500);
+}
+
+.login-modal__domain-hint--ok {
+  color: #6FBF8A;
+}
+
+.login-modal__domain-hint--warn {
+  color: #F5943A;
+}
+
 .login-modal__submit {
   margin-top: 4px;
   font-family: 'Poppins', sans-serif;
